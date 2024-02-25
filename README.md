@@ -16,7 +16,7 @@ PostgreSQL is a RDBMS known for its reliability, robust feature set, and extensi
 
 All IDs are UUIDv4.
 
-1. **Airport:**
+### 1. **Airport:**
 - id (PK)
 - name
 - city
