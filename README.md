@@ -22,12 +22,12 @@ All IDs are UUIDv4.
 - city
 - country
 
-2. **Airlines**
+### 2. **Airlines**
 - id (PK)
 - name
 - code
 
-3. **Flights**
+### 3. **Flights**
 - id (PK)
 - airline_id (FK to Airlines)
 - departure_airport_id (FK to Airports)
@@ -35,26 +35,26 @@ All IDs are UUIDv4.
 - departure_time
 - arrival_time
 
-4. **Passengers**
+### 4. **Passengers**
 - id (PK)
 - name
 - passport_number
 
-5. **Tickets**
+### 5. **Tickets**
 - id (PK)
 - passenger_id (FK to Passengers)
 - flight_id (FK to Flights)
 - seat_number
 - ticket_price
 
-6. **Baggage**
+### 6. **Baggage**
 - id (PK)
 - passenger_id (FK to Passengers)
 - flight_id (FK to Flights)
 - weight
 - is_checked
 
-7. **Boarding Passes**
+### 7. **Boarding Passes**
 - id (PK)
 - passenger_id (FK to Passengers)
 - flight_id (FK to Flights)
