@@ -1,0 +1,27 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('baggages', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->float('weight');
+            $table->boolean('is_checked');
+
+            $table->timestamps();
+
+            $table->foreignUuid('passenger_id')->references('id')->on('passengers');
+            $table->foreignUuid('flight_id')->references('id')->on('flights');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('baggages');
+    }
+};
